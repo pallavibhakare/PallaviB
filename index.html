@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="js/jquery.smooth-scroll.min.js"></script>
+
+	<!-- Portfolio LightBox-->
+		<link href="js/dist/css/lightgallery.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script type="text/javascript">
+        $(document).ready(function(){
+            $('#lightgallery').lightGallery();
+        });
+        </script>
+        <script src="js/dist/js/picturefill.min.js"></script>
+        <script src="js/dist/js/lightgallery.js"></script>
+        <script src="js/dist/js/lg-fullscreen.js"></script>
+        <script src="js/dist/js/lg-thumbnail.js"></script>
+        <script src="js/dist/js/lg-video.js"></script>
+        <script src="js/dist/js/lg-autoplay.js"></script>
+        <script src="js/dist/js/lg-zoom.js"></script>
+        <script src="js/dist/js/lg-hash.js"></script>
+        <script src="js/dist/js/lg-pager.js"></script>
+        <script src="js/dist/lib/jquery.mousewheel.min.js"></script>
+	<!-- End Portfolio LightBox-->
+
+<script>
+$('.smooth').on('click', function() {
+    $.smoothScroll({
+        scrollElement: $('body'),
+        scrollTarget: '#' + this.id
+    });
+    
+    return false;
+});
+</script>
+
+<script>
+	$(function(){
+  $('.btn').click(function(){
+    $('#photo').hasClass('open') ? $('#photo').removeClass('open'):$('#photo').addClass('open')
+  });
+});
+</script>
+
+<link type="text/css" rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<div id="wrapper">	
+			<div id="header" >
+				
+					<div id="parachute"><img src="images/parachute.png"></div>
+					<nav class="menu">
+								<input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open">
+								<label class="menu-open-button" for="menu-open">
+									<span class="hamburger hamburger-1"></span>
+									<span class="hamburger hamburger-2"></span>
+									<span class="hamburger hamburger-3"></span>
+								</label>
+								<a href="#about" class="menu-item">About</a>
+								<a href="#portfolio" class="menu-item">Portfolio</a>
+								<a href="#contact" class="menu-item">Contact</a>
+					</nav>
+					<div id="title">					
+						<img src="images/title.png">							
+					</div>
+					<div id="clouds">
+						
+						<div class="cloud x1"></div>						
+						<div class="cloud x2"></div>							
+						<div class="cloud x3"></div>
+						<div class="cloud x4"></div>
+						<div class="cloud x5"></div>																		
+					</div>					
+								
+			</div>
+			<div id="work">
+				
+				<!-- #endregion Jssor Slider End -->
+				<div class="contact">	<a href="#contact">Hiring Me?</a></div>
+				<div id="linkedin">
+					<div class="first">						
+						<a href="https://www.linkedin.com/in/pallavi-bhakare-b7b9ba59" target="_blank" rel="Connect @pallavibhakare" class="link tooltip"><img src="images/linkedin1.png" title="Pallavi Bhakare"></a>					
+				   </div>
+				   
+				</div>
+			</div>			
+			
+			
+			
+			
+	</div>
+		
+	<section id="page1">
+			<span id="page_top"></span>
+			<a id="about" class="smooth"></a>
+			<div class="about_me">
+				<div id="left">
+					<div id="info1" >
+						<h2>This's Me</h2>
+						<p>HI there! I am a Web Developer. I have my bachelors of Information Technology degree.I love coading and developing websites, software and mobile applications. I would always love to keep up to date with latest cutting-edge technonogies.</p> 
+						<p>I'm self-motivated, quick learner, reliable team member and positive.</p>
+						<p>Want to work together? Let's do it. Contact me below and let's have a talk.</p>
+					</div>
+					<div id="info2" >
+						<h2>Services</h2>
+						<p>Website Development and Design , HTML , CSS , jQuery and  PHP</p>
+					</div>
+					<div id="info3" >
+						<h2>Technical Skills</h2>
+						 <ul id="skills">
+							<li class="row1">HTML/CSS<span>100%</span></li>
+							<li class="row2">Web Design<span>90%</span></li>
+							<li class="row3">PHP<span>70%</span></li>
+							<li class="row4">Joomla<span>60%</span></li>
+							<li class="row5">Javascript/jquery<span>60%</span></li>							
+							<li class="row6">Database:MS SQL, MYSQL<span>60%</span></li>														
+						 </ul>
+					</div>
+				</div>
+				<div id="right">
+					<div id="photo">
+							<div id="camera">
+								  <div class="strip">
+								  </div>
+								  <div class="lens">
+								  </div>
+								  <div class="led">
+								  </div>
+								  <div class="btn">								
+								  </div>
+							</div>
+							<div id="panel">
+								 <div class="pic">
+									<img src="images/photo.jpg"/>
+								  </div>
+								  <center>
+									<a href="#" class="lnk">My Portfolio</a>
+								  </center>
+							</div>
+								<div class="shadow">
+								</div>
+					</div>
+					<div id="details">
+						<h2>Pallavi Bhakare</h2>
+						<p><strong>Web Developer</strong></p>
+						<p>Web, mobile & Software Developer</p>
+						<p>"To keep learning, always tell your free mind to <em>learn and learn</em>."</p>
+						<ul id="social">
+							<li class="tw"><li>
+							<li class="fb"><li>
+							<li class="in"><li>
+							<li class="youtube"><li>						
+						</ul>
+					</div>
+				</div>
+			</div>
+	</section>
+	<section id="page2">
+		<div id="page2_content">
+				<a id="portfolio" class="smooth"></a>						
+				<div>
+					<div class="photobanner">
+						<header>
+							<h1>Work Histoty</h1>
+							<p>Aiming to apply my knowledge in a challenging and growing company that can provide me immense opportunities to grow intellectually, technically and professionally. 
+							Worked as a Web Developer at Webmatrix Technologies,Pune. Web based Application and  programming using HTML , CSS, PHP, JavaScript, JQuery, Mysql,CMS(Joomla) and API's.
+							Strong in front-end GUI development as well as backend database design and development using SQL Server.Strong Analytical Skills.
+							</p>
+						</header>
+						<ul id="lightgallery" class="list-unstyled row">				
+							<li class="col-xs-6 col-sm-4 col-md-3"  data-src="images/portfolio/image-1.jpg" data-sub-html="<h4>Fading Light</h4>">
+								<a href="">
+									<img src="images/portfolio/image-1.jpg" alt="" />
+								</a>
+							</li>
+							<li class="col-xs-6 col-sm-4 col-md-3"  data-src="images/portfolio/image-2.jpg" data-sub-html="<h4>Bowness Bay</h4>">
+								<a href="">
+									<img  src="images/portfolio/image-2.jpg" alt="" />
+								</a>
+							</li>
+							<li class="col-xs-6 col-sm-4 col-md-3"  data-src="images/portfolio/image-3.jpg" data-sub-html="<h4>Bowness Bay</h4>">
+								<a href="">
+								   <img src="images/portfolio/image-3.jpg" alt="" />
+								</a>
+							</li>
+							<li class="col-xs-6 col-sm-4 col-md-3"  data-src="images/portfolio/image-4.jpg" data-sub-html="<h4>Bowness Bay</h4>">
+								<a href="">
+									<img  src="images/portfolio/image-4.jpg" alt="" />
+								</a>
+							</li>
+							<li class="col-xs-6 col-sm-4 col-md-3"  data-src="images/portfolio/image-5.jpg" data-sub-html="<h4>Bowness Bay</h4>">
+								<a href="">
+									<img  src="images/portfolio/image-5.jpg" alt="" />
+								</a>
+							</li>
+							<li class="col-xs-6 col-sm-4 col-md-3"  data-src="images/portfolio/image-6.jpg" data-sub-html="<h4>Bowness Bay</h4>">
+								<a href="">
+								   <img  src="images/portfolio/image-6.jpg" alt="" />
+								</a>
+							</li>
+							<li class="col-xs-6 col-sm-4 col-md-3"  data-src="images/portfolio/image-7.jpg" data-sub-html="<h4>Bowness Bay</h4>">
+								<a href="">
+									<img  src="images/portfolio/image-7.jpg" alt="" />
+								</a>
+							</li><li class="col-xs-6 col-sm-4 col-md-3"  data-src="images/portfolio/image-8.jpg" data-sub-html="<h4>Bowness Bay</h4>">
+								<a href="">
+								   <img  src="images/portfolio/image-8.jpg" alt="" />
+								</a>
+							</li>
+							<!--<li class="col-xs-6 col-sm-4 col-md-3"  data-src="images/portfolio/image-9.jpg" data-sub-html="<h4>Bowness Bay</h4>">
+								<a href="">
+									<img  src="images/portfolio/image-9.jpg" alt="" />
+								</a>
+							</li>-->
+						</ul>
+					</div>				
+				</div>
+		</div>
+	</section>
+	<section id="page3">		
+			<div class="sea ">
+				<div class="circle-wrapper">
+					<div class="bubble"></div>
+					<div class="submarine-wrapper move-right">
+						<div class="submarine-body">
+							<div class="window"></div>
+							<div class="engine"></div>
+							<div class="light"></div>
+						</div>
+						<div class="helix"></div>
+						<div class="hat">
+						  <div class="leds-wrapper">
+							  <div class="periscope"></div>
+							  <div class="leds"></div>
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>	
+		<div id="page3_content">
+			<a id="contact" class="smooth"></a>			
+			<div id="left">
+					<div id="footer_left">
+						<h1>Let's Talk Business</h1>
+						<h3>Phone: <strong>+1 206 519 2242</strong></h3>
+						<h3>E-mail: <a href="#">hello@pallavibhakare.com</a></h3>						
+					</div>
+			</div>			
+			<div id="right">
+					<div id="footer_right">
+						<div id="container">
+							<div id="form_header">
+								<h1>Message Me</h1>								
+								<h3>Fill out the form below to lean more!</h3>								
+							</div>
+							<form  id="form_fields" action="notify.php" name="htmlform" method="post" enctype="text/plain">
+								<ul>
+									<li><label>first name </label><input type="text" class="fname" name="fname" placeholder="John" required /></li>
+									<li><label>last name </label><input type="text" class="lname" name="lname" placeholder="Smith"></li>
+									<li><label>e-mail<span class="req">* </span></label><input type="email" class="email" name="email" placeholder="johnsmith@gmail.com" required></li>
+									<li><div class="divider"></div></li>
+									<li><label>Message</label></li><li><textarea class="message" cols="46" rows="3" name="message" required></textarea></li>
+									<li><input class="submit_button" type="submit" value="Submit" name="submit"><small>or press<strong> enter</strong></small></li>
+								</ul>
+							</form>
+							
+						</div>
+					</div>
+			</div>	
+			<div class="fish">
+					<div id="twitter_button" >
+							<div id="axis" class="one">
+								<img class="yellowfish object  move-right" src="images/twitter-4.png" />
+								<!--<img class="object van move-right" src="images/van-to-right.png"/>-->
+							
+								<iframe class=" object  move-right"
+								  src="https://platform.twitter.com/widgets/tweet_button.html?size=l&url=https%3A%2F%2Fdev.twitter.com%2Fweb%2Ftweet-button&via=twitterdev&related=twitterapi%2Ctwitter&text=custom%20share%20text&hashtags=example%2Cdemo"
+								  width="100"
+								  height="100"
+								  title="Twitter Tweet Button"
+								  style="border: 0; overflow: hidden;">
+								</iframe>
+							</div>
+					</div>
+				
+				<div class="shark">					
+					<iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&layout=button&size=large&mobile_iframe=true&width=72&height=28&appId" width="72" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+				</div>							
+			</div>
+				
+		</div>
+		<div id="water_bubbles">
+				<div class="bubbles bubble-1"></div>
+				<div class="bubbles bubble-5"></div>
+				<div class="bubbles bubble-2"></div>
+				<div class="bubbles bubble-6"></div>
+				<div class="bubbles bubble-3"></div>
+				<div class="bubbles bubble-7"></div>
+				<div class="bubbles bubble-4"></div>
+				<div class="bubbles bubble-8"></div>
+		</div>
+		
+	</section>	
+	<div id="footer">
+			<p>© Copyright 2016 by pallavibhakare.com - All rights reserved.</p>
+	</div>
+</body>
+
+</html>
