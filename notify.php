@@ -1,87 +1,86 @@
 <?php
-if(isset($_POST['email'])) {
-	
-	// CHANGE THE TWO LINES BELOW
-	$email_to = "visitor.review19@gmail.com";
-	
-	$email_subject = "website html form submissions";
-	
-	
-	function died($error) {
-		// your error code can go here
-		echo "We're sorry, but there's errors found with the form you submitted.<br /><br />";
-		echo $error."<br /><br />";
-		echo "Please go back and fix these errors.<br /><br />";
-		die();
-	}
-	
-	// validation expected data exists
-	if(!isset($_POST['fname']) ||
-		!isset($_POST['lname']) ||
-		!isset($_POST['email']) ||		
-		!isset($_POST['message'])) {
-		died('We are sorry, but there appears to be a problem with the form you submitted.');		
-	}
-	
-	$fname = $_POST['fname']; // required
-	$lname = $_POST['lname']; // required
-	$email_from = $_POST['email']; // required	
-	$message = $_POST['message']; // required
-	
-	$error_message = "";
-	$email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
-  if(!preg_match($email_exp,$email_from)) {
-  	$error_message .= 'The Email Address you entered does not appear to be valid.<br />';
-  }
-	$string_exp = "/^[A-Za-z .'-]+$/";
-  if(!preg_match($string_exp,$fname)) {
-  	$error_message .= 'The First Name you entered does not appear to be valid.<br />';
-  }
-  if(!preg_match($string_exp,$lname)) {
-  	$error_message .= 'The Last Name you entered does not appear to be valid.<br />';
-  }
-  if(strlen($message) < 2) {
-  	$error_message .= 'The message you entered do not appear to be valid.<br />';
-  }
-  if(strlen($error_message) > 0) {
-  	died($error_message);
-  }
-	$email_message = "Form details below.\n\n";
-	
-	function clean_string($string) {
-	  $bad = array("content-type","bcc:","to:","cc:","href");
-	  return str_replace($bad,"",$string);
-	}
-	
-	$email_message .= "First Name: ".clean_string($fname)."\n";
-	$email_message .= "Last Name: ".clean_string($lname)."\n";
-	$email_message .= "Email: ".clean_string($email_from)."\n";
-	$email_message .= "Comments: ".clean_string($comments)."\n";
-	
-	
-// create email headers
-$headers = 'From: '.$email_from."\r\n".
-'Reply-To: '.$email_from."\r\n" .
-'X-Mailer: PHP/' . phpversion();
-@mail($email_to, $email_subject, $email_message, $headers);  
-?>
-
-<!-- place your own success html below -->
-
-<!DOCTYPE HTML> 
-<html>
-<head>
-	<title>Thank you!</title>
-</head>
-
-<body>
-<h2>Thank you for contacting us. We will be in touch with you very soon.</h2>
-
-
-</body>
-</html>
-
-<?php
+if( isset($_POST) ){
+     
+    //form validation vars
+    $formok = true;
+    $errors = array();
+     
+    //submission data
+    $ipaddress = $_SERVER['REMOTE_ADDR'];
+    $date = date('d/m/Y');
+    $time = date('H:i:s');
+     
+    //form data
+    $name = $_POST['fname'];    
+    $email = $_POST['email'];
+    $lname = $_POST['lname'];   
+    $message = $_POST['message'];
+     
+    //validate form data
+     
+    //validate name is not empty
+    if(empty($name)){
+        $formok = false;
+        $errors[] = "You have not entered a name";
+    }
+     
+    //validate email address is not empty
+    if(empty($email)){
+        $formok = false;
+        $errors[] = "You have not entered an email address";
+    //validate email address is valid
+    }elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+        $formok = false;
+        $errors[] = "You have not entered a valid email address";
+    }
+     
+    //validate message is not empty
+    if(empty($message)){
+        $formok = false;
+        $errors[] = "You have not entered a message";
+    }
+    //validate message is greater than 20 characters
+    elseif(strlen($message) < 20){
+        $formok = false;
+        $errors[] = "Your message must be greater than 20 characters";
+    }
+     
+    //send email if all is ok
+    if($formok){
+        $headers = "From:".$email. "\r\n";
+        $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+         
+        $emailbody = "<p>You have received a new message from the enquiries form on your website.</p>
+                      <p><strong>Name: </strong> {$name} </p>
+                      <p><strong>Email Address: </strong> {$email} </p>
+                      
+                     
+                      <p><strong>Message: </strong> {$message} </p>
+                      <p>This message was sent from the IP Address: {$ipaddress} on {$date} at {$time}</p>";
+         
+        mail("pallavibhakare19@gmail.com","New Submission On Contact form",$emailbody,$headers);
+         
+    }
+     
+    //what we need to return back to our form
+    $returndata = array(
+        'posted_form_data' => array(
+            'name' => $name,
+            'email' => $email,                       
+            'message' => $message
+        ),
+        'form_ok' => $formok,
+        'errors' => $errors
+    );
+         
+     
+    //if this is not an ajax request
+    if(empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) !== 'xmlhttprequest'){
+        //set session variables
+        session_start();
+        $_SESSION['cf_returndata'] = $returndata;
+         
+        //redirect back to form
+        header('location: ' . $_SERVER['HTTP_REFERER']);
+    }
 }
-die();
-?>
