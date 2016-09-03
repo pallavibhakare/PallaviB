@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="js/jquery.smooth-scroll.min.js"></script>
 
@@ -264,7 +265,7 @@ $('.smooth').on('click', function() {
 								<h1>Message Me</h1>								
 								<h3>Fill out the form below to lean more!</h3>								
 							</div>
-							<form  id="form_fields" action="notify.php" name="htmlform" method="post" enctype="text/plain">
+							<form  method="post" action="notify.php" id="form_fields" >							
 								<ul>
 									<li><label>first name </label><input type="text" class="fname" name="fname" placeholder="John" required /></li>
 									<li><label>last name </label><input type="text" class="lname" name="lname" placeholder="Smith"></li>
