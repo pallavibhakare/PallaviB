@@ -1132,7 +1132,7 @@ div#left h2{color: #2f3a4c; margin: 10px 0px;}
             
 .led {
   position: absolute;
-  left: 35px; top: 30px;  
+  right: 16px; top: 30px;  
   width: 15px; height: 15px;
   border-radius: 50%;
   background-color: rgb(255, 136, 115);
