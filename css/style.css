@@ -6,7 +6,7 @@ body{margin: 0px; height:auto;}
 
 .about_me div#left{
     float: left;
-    width:48%;
+    width: 48%;
 	margin: 20px 0px;
 }
 .about_me div#right {
@@ -1530,7 +1530,6 @@ ul#lightgallery {
     text-align: center;
 }
 /*End Portfolio*/
-/*Social Icons*/
 ul#social {    margin: 0px;  margin-top: 15px;    }
 ul#social li {    margin-right: 10px;    float: left;    margin-bottom: 10px;    padding: 0px;}
 ul#social li a.tooltip {width: 39px;height: 39px;display: block;}
@@ -1538,9 +1537,5 @@ ul#social li a.tooltip {width: 39px;height: 39px;display: block;}
 ul#social li.tw{background-image:url(../images/social.png); background-position:-90px 3px; background-color: #6f6666; border-radius: 12px 0px; padding: 2px;}
 ul#social li.fb{background-image:url(../images/social.png); background-position:-48px 2px;background-color: #6f6666; border-radius: 12px 0px; padding: 2px;}
 ul#social li.in{background-image:url(../images/social.png); background-position:-2px 0px;background-color: #6f6666; border-radius: 12px 0px; padding: 2px;}
-ul#social li.cv{background-image:url(../images/social.png); background-position:-95px -35px;background-color: #6f6666; border-radius: 12px 0px; padding: 2px;}
-/*End Social*/
-a.site-link {
-    color: #fff;
-    font-weight: bold;
-}
+ul#social li.cv{background-image:url(../images/social.png); background-position:-96px -33px;background-color: #6f6666; border-radius: 12px 0px; padding: 2px;}
+
