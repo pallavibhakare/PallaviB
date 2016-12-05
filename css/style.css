@@ -9,6 +9,9 @@ body{margin: 0px; height:auto;}
     width:50%;
 	margin: 20px 0px;
 }
+#left .info {
+    margin: 20px;
+}
 .about_me div#right {
     float: left;
     width: 50%;
