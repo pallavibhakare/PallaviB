@@ -3,47 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="icon" href="favicon.ico">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="js/jquery.smooth-scroll.min.js"></script>
 
-	<!-- Portfolio LightBox-->
-		<link href="js/dist/css/lightgallery.css" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-		<script type="text/javascript">
-        $(document).ready(function(){
-            $('#lightgallery').lightGallery();
-        });
-        </script>
-        <script src="js/dist/js/picturefill.min.js"></script>
-        <script src="js/dist/js/lightgallery.js"></script>
-        <script src="js/dist/js/lg-fullscreen.js"></script>
-        <script src="js/dist/js/lg-thumbnail.js"></script>
-        <script src="js/dist/js/lg-video.js"></script>
-        <script src="js/dist/js/lg-autoplay.js"></script>
-        <script src="js/dist/js/lg-zoom.js"></script>
-        <script src="js/dist/js/lg-hash.js"></script>
-        <script src="js/dist/js/lg-pager.js"></script>
-        <script src="js/dist/lib/jquery.mousewheel.min.js"></script>
-	<!-- End Portfolio LightBox-->
-
-<script>
-$('.smooth').on('click', function() {
-    $.smoothScroll({
-        scrollElement: $('body'),
-        scrollTarget: '#' + this.id
-    });
-    
-    return false;
-});
-</script>
-
-<script>
-	$(function(){
-  $('.btn').click(function(){
-    $('#photo').hasClass('open') ? $('#photo').removeClass('open'):$('#photo').addClass('open')
-  });
-});
-</script>
 
 <link type="text/css" rel="stylesheet" href="css/style.css">
 </head>
@@ -316,6 +276,47 @@ $('.smooth').on('click', function() {
 	<div id="footer">
 			<p>© Copyright 2016 by pallavibhakare.com - All rights reserved.</p>
 	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="js/jquery.smooth-scroll.min.js"></script>
+
+	<!-- Portfolio LightBox-->
+		<link href="js/dist/css/lightgallery.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script type="text/javascript">
+        $(document).ready(function(){
+            $('#lightgallery').lightGallery();
+        });
+        </script>
+        <script src="js/dist/js/picturefill.min.js"></script>
+        <script src="js/dist/js/lightgallery.js"></script>
+        <script src="js/dist/js/lg-fullscreen.js"></script>
+        <script src="js/dist/js/lg-thumbnail.js"></script>
+        <script src="js/dist/js/lg-video.js"></script>
+        <script src="js/dist/js/lg-autoplay.js"></script>
+        <script src="js/dist/js/lg-zoom.js"></script>
+        <script src="js/dist/js/lg-hash.js"></script>
+        <script src="js/dist/js/lg-pager.js"></script>
+        <script src="js/dist/lib/jquery.mousewheel.min.js"></script>
+	<!-- End Portfolio LightBox-->
+
+<script>
+$('.smooth').on('click', function() {
+    $.smoothScroll({
+        scrollElement: $('body'),
+        scrollTarget: '#' + this.id
+    });
+    
+    return false;
+});
+</script>
+
+<script>
+	$(function(){
+  $('.btn').click(function(){
+    $('#photo').hasClass('open') ? $('#photo').removeClass('open'):$('#photo').addClass('open')
+  });
+});
+</script>
 </body>
 
 </html>
