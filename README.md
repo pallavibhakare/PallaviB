@@ -1,4 +1,4 @@
-# websketch
+# Portfolio Sample
 
 ### Description:
 
@@ -6,4 +6,4 @@ This project is to showcase my skills and some projects I have done.
 
 ### Demo:
 
-https://pallavibhakare.github.io/websketch/
+https://pallavibhakare.github.io/PallaviB/
